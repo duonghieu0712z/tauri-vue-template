@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import { readJson, updateFile } from './utils.js';
+import { parsePositionals, readJson, updateFile } from './utils.js';
 
 function parseArgs() {
-    const args = process.argv.slice(2).filter((arg) => arg !== '--');
+    const args = parsePositionals(process.argv.slice(2));
     if (args.length !== 1 || args[0].startsWith('--')) {
         throw new Error('Usage: node scripts/bump-version.js VERSION');
     }

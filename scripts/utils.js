@@ -23,6 +23,10 @@ export function parseOptions(args) {
     return options;
 }
 
+export function parsePositionals(args) {
+    return args.filter((arg) => arg !== '--');
+}
+
 export function replaceAll(content, replacements) {
     return replacements.reduce(
         (updatedContent, [search, replacement]) => updatedContent.replaceAll(search, replacement),

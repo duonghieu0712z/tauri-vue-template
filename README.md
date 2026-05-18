@@ -60,13 +60,13 @@ pnpm lint:fix
 Use the rename script after creating a new app from this template:
 
 ```bash
-pnpm rename -- --name "My App" --id "com.example.my-app"
+pnpm rename --name "My App" --id "com.example.my-app"
 ```
 
 By default, the package and Rust crate names are derived from the app name. To set the package name explicitly:
 
 ```bash
-pnpm rename -- --name "My App" --id "com.example.my-app" --package "my-app"
+pnpm rename --name "My App" --id "com.example.my-app" --package "my-app"
 ```
 
 After renaming, regenerate lockfiles with the package managers:
