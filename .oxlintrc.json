@@ -1,18 +1,24 @@
 {
     "$schema": "./node_modules/oxlint/configuration_schema.json",
-    "plugins": ["typescript", "vue"],
+    "plugins": ["eslint", "import", "oxc", "typescript", "vue"],
     "env": {
         "browser": true
     },
-    "ignorePatterns": ["node_modules", "dist", "src/generated", "src-tauri/target"],
+    "categories": {
+        "correctness": "error"
+    },
+    "ignorePatterns": ["dist/**", "src/generated/**", "src-tauri/target/**"],
     "rules": {
         "curly": "error",
+        "import/consistent-type-specifier-style": "error",
         "typescript/consistent-type-imports": [
             "error",
             {
                 "prefer": "type-imports",
                 "fixStyle": "separate-type-imports"
             }
-        ]
+        ],
+        "typescript/no-empty-object-type": "off",
+        "typescript/no-explicit-any": "off"
     }
 }
