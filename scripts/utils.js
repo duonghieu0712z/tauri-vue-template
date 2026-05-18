@@ -2,15 +2,16 @@ import { readFile, writeFile } from 'node:fs/promises';
 
 export function parseOptions(args) {
     const options = {};
+    const normalizedArgs = args.filter((arg) => arg !== '--');
 
-    for (let index = 0; index < args.length; index += 1) {
-        const arg = args[index];
+    for (let index = 0; index < normalizedArgs.length; index += 1) {
+        const arg = normalizedArgs[index];
         if (!arg.startsWith('--')) {
             throw new Error(`Unexpected argument: ${arg}`);
         }
 
         const key = arg.slice(2);
-        const value = args[index + 1];
+        const value = normalizedArgs[index + 1];
         if (!value || value.startsWith('--')) {
             throw new Error(`Missing value for --${key}`);
         }
