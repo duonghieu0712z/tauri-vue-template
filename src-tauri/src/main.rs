@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    kazmas_lib::run()
+    tauri_vue_template_lib::run()
 }

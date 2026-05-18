@@ -1,1 +1,16 @@
 @import 'tailwindcss';
+
+@import '@/styles/fonts.css';
+
+@theme {
+    --font-ui: 'Geist', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+    * {
+        @apply select-none;
+    }
+    body {
+        @apply font-ui cursor-default;
+    }
+}

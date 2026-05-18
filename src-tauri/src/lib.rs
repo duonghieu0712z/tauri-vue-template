@@ -21,8 +21,8 @@ pub fn run() {
     #[cfg(not(debug_assertions))]
     let builder = builder.plugin(
         tauri_plugin_log::Builder::new()
-            .level(tauri_plugin_log::log::LevelFilter::Info)
-            .filter(|metadata| metadata.target().starts_with("kazmas"))
+            .level(log::LevelFilter::Info)
+            .filter(|metadata| metadata.target().starts_with("tauri_vue_template"))
             .format(|out, message, record| {
                 out.finish(format_args!(
                     "[{}]|{:<5}: {}",
