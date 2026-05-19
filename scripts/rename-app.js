@@ -67,7 +67,6 @@ async function main() {
 
     await updateFile('package.json', replacements);
     await updateFile('index.html', replacements);
-    await updateFile('src/App.vue', replacements);
     await updateFile('src-tauri/tauri.conf.json', replacements);
     await updateFile('src-tauri/Cargo.toml', replacements);
     await updateFile('src-tauri/src/main.rs', replacements);
