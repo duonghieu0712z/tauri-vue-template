@@ -13,8 +13,8 @@
         "windows": [
             {
                 "title": "Tauri Vue Template",
-                "width": 1440,
-                "height": 900,
+                "width": 1200,
+                "height": 800,
                 "center": true
             }
         ],
