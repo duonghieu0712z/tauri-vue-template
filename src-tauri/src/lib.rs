@@ -1,17 +1,19 @@
-#[cfg(all(debug_assertions, not(mobile)))]
-use specta_typescript::Typescript;
-#[cfg(debug_assertions)]
-use tauri::Manager;
-use tauri_specta::{Builder, collect_commands};
+use tauri_specta::Builder;
+
+mod command;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
-    let specta_builder = Builder::<tauri::Wry>::new().commands(collect_commands![]);
+    let specta_builder = Builder::<tauri::Wry>::new().commands(command::commands());
 
     #[cfg(all(debug_assertions, not(mobile)))]
-    specta_builder
-        .export(Typescript::default(), "../src/generated/bindings.ts")
-        .unwrap();
+    {
+        use specta_typescript::Typescript;
+
+        specta_builder
+            .export(Typescript::default(), "../src/generated/bindings.ts")
+            .unwrap();
+    }
 
     let builder = tauri::Builder::default();
 
@@ -22,7 +24,7 @@ pub fn run() {
     let builder = builder.plugin(
         tauri_plugin_log::Builder::new()
             .level(log::LevelFilter::Info)
-            .filter(|metadata| metadata.target().starts_with("tauri_vue_template"))
+            .filter(|metadata| metadata.target().starts_with(env!("CARGO_CRATE_NAME")))
             .format(|out, message, record| {
                 out.finish(format_args!(
                     "[{}]|{:<5}: {}",
@@ -38,7 +40,11 @@ pub fn run() {
         .invoke_handler(specta_builder.invoke_handler())
         .setup(|_app| {
             #[cfg(debug_assertions)]
-            _app.get_webview_window("main").unwrap().open_devtools();
+            {
+                use tauri::Manager;
+
+                _app.get_webview_window("main").unwrap().open_devtools();
+            }
             Ok(())
         })
         .run(tauri::generate_context!())

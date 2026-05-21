@@ -70,7 +70,6 @@ async function main() {
     await updateFile('src-tauri/tauri.conf.json', replacements);
     await updateFile('src-tauri/Cargo.toml', replacements);
     await updateFile('src-tauri/src/main.rs', replacements);
-    await updateFile('src-tauri/src/lib.rs', replacements);
 }
 
 try {
