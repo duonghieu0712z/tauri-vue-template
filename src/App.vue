@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
 import { commands } from '@/generated/bindings';
 
 const name = ref('');
