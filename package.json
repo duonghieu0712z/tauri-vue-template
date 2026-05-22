@@ -59,7 +59,7 @@
         "vue-tsc": "^3.3.1"
     },
     "lint-staged": {
-        "*.{ts,tsx,vue,html,css,json,yaml}": [
+        "*.{ts,tsx,vue,html,css,json,yml,yaml}": [
             "oxfmt"
         ],
         "*.{ts,tsx,vue}": [
