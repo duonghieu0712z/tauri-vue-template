@@ -76,9 +76,7 @@ async function main() {
 
     await writeJson('package.json', packageJson);
 
-    await updateFile('index.html', [
-        [/<title>.*<\/title>/, `<title>${appName}</title>`],
-    ]);
+    await updateFile('index.html', [[/<title>.*<\/title>/, `<title>${appName}</title>`]]);
 
     const tauriConfig = await readJson('src-tauri/tauri.conf.json');
     tauriConfig.productName = appName;
@@ -94,7 +92,12 @@ async function main() {
     await writeJson('src-tauri/tauri.conf.json', tauriConfig);
 
     let cargoToml = await readFile('src-tauri/Cargo.toml', 'utf8');
-    cargoToml = replaceOne(cargoToml, /^name = "([^"]+)"/m, `name = "${crateName}"`, 'Cargo package name');
+    cargoToml = replaceOne(
+        cargoToml,
+        /^name = "([^"]+)"/m,
+        `name = "${crateName}"`,
+        'Cargo package name',
+    );
     cargoToml = replaceOne(
         cargoToml,
         /^description = "([^"]+)"/m,
