@@ -2,7 +2,7 @@
 name = "tauri-vue-template"
 version = "0.0.1"
 description = "A Tauri Vue application template"
-authors = ["Duong Hieu"]
+authors = ["duonghieu0712z"]
 edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -24,6 +24,7 @@ tauri = { version = "2.11.2", features = [] }
 tauri-plugin-devtools = "2.1.0"
 tauri-plugin-log = "2.8.0"
 tauri-plugin-opener = "2.5.4"
+tauri-plugin-prevent-default = "5.0.0"
 tauri-specta = { version = "2.0.0-rc.25", features = ["javascript", "typescript"] }
 
 [build-dependencies]

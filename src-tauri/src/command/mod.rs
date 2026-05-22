@@ -8,5 +8,6 @@ pub fn commands<R: Runtime>() -> Commands<R> {
 #[tauri::command]
 #[specta::specta]
 fn greet(name: &str) -> String {
+    log::info!("Backend was called with an argument: {}", name);
     format!("Hello, {}! You've been greeted from Rust!", name)
 }
