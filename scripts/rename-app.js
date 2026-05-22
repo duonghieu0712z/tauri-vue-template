@@ -8,7 +8,9 @@ function parseArgs() {
     const options = parseOptions(process.argv.slice(2));
 
     if (!options.name || !options.id) {
-        throw new Error('Usage: node scripts/rename-app.js --name "App Name" --id "com.example.app"');
+        throw new Error(
+            'Usage: node scripts/rename-app.js --name "App Name" --id "com.example.app"',
+        );
     }
 
     return options;

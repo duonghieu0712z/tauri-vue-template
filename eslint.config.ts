@@ -1,5 +1,3 @@
-import type { Linter } from 'eslint';
-
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting';
 import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript';
 import pluginOxlint from 'eslint-plugin-oxlint';
@@ -31,4 +29,4 @@ export default defineConfigWithVueTs(
             'vue/require-default-prop': 'off',
         },
     },
-) as Linter.Config[];
+);
