@@ -28,14 +28,27 @@ export function parsePositionals(args) {
 }
 
 export function replaceAll(content, replacements) {
-    return replacements.reduce(
-        (updatedContent, [search, replacement]) => updatedContent.replaceAll(search, replacement),
-        content,
-    );
+    return replacements.reduce((updatedContent, [search, replacement]) => {
+        if (search instanceof RegExp) {
+            return updatedContent.replace(search, replacement);
+        }
+
+        return updatedContent.replaceAll(search, replacement);
+    }, content);
 }
 
 export async function readJson(path) {
     return JSON.parse(await readFile(path, 'utf8'));
+}
+
+export async function writeJson(path, value) {
+    await writeFile(path, `${JSON.stringify(value, null, 4)}\n`);
+    console.log(`Updated ${path}`);
+}
+
+export async function writeText(path, value) {
+    await writeFile(path, value);
+    console.log(`Updated ${path}`);
 }
 
 export async function updateFile(path, replacements) {

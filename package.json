@@ -2,6 +2,7 @@
     "name": "tauri-vue-template",
     "version": "0.0.1",
     "private": true,
+    "author": "duonghieu0712z",
     "type": "module",
     "scripts": {
         "dev": "vite",
