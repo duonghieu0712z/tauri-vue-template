@@ -23,6 +23,22 @@ sudo apt-get update
 sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
 ```
 
+## Create a New Project
+
+After publishing the create package, scaffold a new project with:
+
+```bash
+pnpm create @duonghieu0712z/tauri-vue-template@latest
+```
+
+Pass values directly when needed:
+
+```bash
+pnpm create @duonghieu0712z/tauri-vue-template@latest my-app --name "My App" --id "com.example.my-app" --author "Your Name"
+```
+
+The create package copies this template into the target directory, updates the package name, Tauri product name, application identifier, Rust crate names, release workflow metadata, and then leaves dependency installation to the new project.
+
 ## Development
 
 Install dependencies:

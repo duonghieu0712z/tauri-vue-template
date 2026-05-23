@@ -23,12 +23,15 @@ async function readCurrent() {
 
 async function main() {
     const options = parseArgs();
-    const current = await readCurrent();
-    const replacements = [[current.version, options.version]];
+    await readCurrent();
 
-    await updateFile('package.json', replacements);
-    await updateFile('src-tauri/tauri.conf.json', replacements);
-    await updateFile('src-tauri/Cargo.toml', replacements);
+    await updateFile('package.json', [[/^(\s*"version":\s*")[^"]+(")/m, `$1${options.version}$2`]]);
+    await updateFile('src-tauri/tauri.conf.json', [
+        [/^(\s*"version":\s*")[^"]+(")/m, `$1${options.version}$2`],
+    ]);
+    await updateFile('src-tauri/Cargo.toml', [
+        [/^version = "[^"]+"/m, `version = "${options.version}"`],
+    ]);
 }
 
 try {
