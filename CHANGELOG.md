@@ -6,9 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.0.3] - 2026-07-02
+
 ### Changed
 
-- Updated release workflow matrix labels to distinguish macOS Apple Silicon and Intel builds.
+- Updated the release workflow to build macOS x86_64 artifacts on the Intel macOS runner.
+- Removed explicit macOS target arguments from the release workflow now that macOS builds run natively per runner architecture.
 
 ## [0.0.2] - 2026-07-02
 
@@ -43,6 +46,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Added GitHub Actions workflows for frontend quality checks, Rust formatting, Clippy checks, and cross-platform release builds.
 - Added release packaging for macOS, Linux, and Windows through `tauri-apps/tauri-action`.
 
-[unreleased]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v0.0.2...HEAD
+[unreleased]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v0.0.3...HEAD
+[0.0.3]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/duonghieu0712z/tauri-vue-template/releases/tag/v0.0.1
