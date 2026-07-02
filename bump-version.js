@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import { parsePositionals, readJson, updateFile } from './utils.js';
+import { readFile, writeFile } from 'node:fs/promises';
 
 function parseArgs() {
-    const args = parsePositionals(process.argv.slice(2));
+    const args = process.argv.slice(2).filter((arg) => arg !== '--');
     if (args.length !== 1 || args[0].startsWith('--')) {
-        throw new Error('Usage: node scripts/bump-version.js VERSION');
+        throw new Error('Usage: node bump-version.js VERSION');
     }
 
     return {
@@ -13,17 +13,21 @@ function parseArgs() {
     };
 }
 
-async function readCurrent() {
-    const packageJson = await readJson('package.json');
+function replaceAll(content, replacements) {
+    return replacements.reduce(
+        (updatedContent, [search, replacement]) => updatedContent.replace(search, replacement),
+        content,
+    );
+}
 
-    return {
-        version: packageJson.version,
-    };
+async function updateFile(path, replacements) {
+    const content = await readFile(path, 'utf8');
+    await writeFile(path, replaceAll(content, replacements));
+    console.log(`Updated ${path}`);
 }
 
 async function main() {
     const options = parseArgs();
-    await readCurrent();
 
     await updateFile('package.json', [[/^(\s*"version":\s*")[^"]+(")/m, `$1${options.version}$2`]]);
     await updateFile('src-tauri/tauri.conf.json', [

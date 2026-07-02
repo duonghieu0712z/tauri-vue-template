@@ -6,23 +6,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-    --font-ui: 'Geist', ui-sans-serif, system-ui, sans-serif;
-}
-
-@layer base {
-    * {
-        @apply border-border outline-ring/50 select-none;
-    }
-    body {
-        @apply bg-background text-foreground font-ui cursor-default;
-    }
-    button:not(:disabled),
-    [role='button']:not(:disabled) {
-        cursor: pointer;
-    }
+    --font-ui: 'Geist', var(--font-sans);
 }
 
 @theme inline {
+    --font-heading: var(--font-sans);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -127,4 +115,57 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+
+    html,
+    body,
+    #app {
+        @apply h-full w-full overflow-hidden overscroll-none;
+    }
+
+    html {
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        @apply bg-background text-foreground font-ui;
+        @apply cursor-default antialiased select-none;
+    }
+
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        @apply cursor-pointer;
+    }
+
+    input {
+        @apply appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none;
+    }
+}
+
+@utility scrollbar {
+    &::-webkit-scrollbar {
+        width: calc(var(--spacing) * 1.5);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 1px solid transparent;
+        border-radius: calc(infinity* 1px);
+        background-clip: content-box;
+        background-color: var(--color-input);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color-ring);
+    }
 }
