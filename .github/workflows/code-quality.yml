@@ -67,9 +67,13 @@ jobs:
 
       - name: Check formatting
         uses: oxc-project/oxfmt-action@v0.0.1
+        with:
+          base-branch: main
 
       - name: Check oxlint
         uses: oxc-project/oxlint-action@latest
+        with:
+          base-branch: main
 
       - name: Check ESLint
         uses: reviewdog/action-eslint@v1
