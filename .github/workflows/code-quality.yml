@@ -68,11 +68,13 @@ jobs:
       - name: Check formatting
         uses: oxc-project/oxfmt-action@v0.0.1
         with:
+          all-files: true
           base-branch: main
 
       - name: Check oxlint
         uses: oxc-project/oxlint-action@latest
         with:
+          all-files: true
           base-branch: main
 
       - name: Check ESLint
@@ -82,7 +84,6 @@ jobs:
           filter_mode: ${{ github.event_name == 'pull_request' && 'added' || 'nofilter' }}
           fail_level: error
           eslint_flags: '. --cache'
-          only-changed: true
 
       - name: Check types
         run: pnpm type-check
