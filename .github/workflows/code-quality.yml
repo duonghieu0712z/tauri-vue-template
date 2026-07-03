@@ -66,10 +66,10 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Check formatting
-        run: pnpm format
+        uses: oxc-project/oxfmt-action@v0.0.1
 
       - name: Check oxlint
-        run: pnpm lint:check:oxlint --format=github
+        uses: oxc-project/oxlint-action@v3
 
       - name: Check ESLint
         uses: reviewdog/action-eslint@v1
@@ -78,6 +78,7 @@ jobs:
           filter_mode: ${{ github.event_name == 'pull_request' && 'added' || 'nofilter' }}
           fail_level: error
           eslint_flags: '. --cache'
+          only-changed: true
 
       - name: Check types
         run: pnpm type-check
