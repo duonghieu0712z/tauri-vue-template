@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Updated the release workflow to read the `Unreleased` changelog section when creating manual release drafts.
+- Updated release asset names to use product names and user-friendly platform labels.
 
 ## [0.1.1] - 2026-07-06
 
