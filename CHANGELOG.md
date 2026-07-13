@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Updated the release workflow matrix to use `platform` for release asset naming.
+- Updated the TypeScript version range to allow compatible 6.x updates.
+- Updated the frontend quality workflow to run a production build check after type checking.
+
+### Removed
+
+- Removed the custom scrollbar utility from global styles.
+
 ## [0.1.2] - 2026-07-08
 
 ### Changed
@@ -31,6 +41,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Updated the release workflow to build macOS x86_64 artifacts on the Intel macOS runner.
+
+### Removed
+
 - Removed explicit macOS target arguments from the release workflow now that macOS builds run natively per runner architecture.
 
 ## [0.0.2] - 2026-07-02
