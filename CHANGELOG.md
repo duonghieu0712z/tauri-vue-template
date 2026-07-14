@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Updated the release workflow matrix to use `platform` for release asset naming.
-- Updated the TypeScript version range to allow compatible 6.x updates.
+- Updated the code quality workflow to pin pnpm to version 11.11.
 - Updated the frontend quality workflow to run a production build check after type checking.
 
 ### Removed
