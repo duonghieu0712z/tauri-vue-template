@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Updated the release workflow matrix to use `platform` for release asset naming.
+- Updated the release workflow to build Intel macOS artifacts on the macOS 26 Intel runner.
 - Updated the frontend quality workflow to run a production build check after type checking.
 - Updated frontend and tooling dependencies to their latest compatible versions.
 - Updated the lint-staged Rust formatter command to use the configured default Rust toolchain.
