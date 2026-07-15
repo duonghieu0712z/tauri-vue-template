@@ -9,7 +9,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Updated the release workflow matrix to use `platform` for release asset naming.
-- Updated GitHub Actions workflows to pin pnpm to version 11.11, avoiding the `pnpm/action-setup` self-installer failure seen with pnpm 11.12 ([pnpm/action-setup#276](https://github.com/pnpm/action-setup/issues/276)).
 - Updated the frontend quality workflow to run a production build check after type checking.
 - Updated frontend and tooling dependencies to their latest compatible versions.
 - Updated the lint-staged Rust formatter command to use the configured default Rust toolchain.
