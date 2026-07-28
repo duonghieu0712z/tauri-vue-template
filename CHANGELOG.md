@@ -9,6 +9,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Updated Oxfmt to use the global Tailwind CSS stylesheet for class sorting and changed the font stylesheet import to a formatter-resolvable relative path.
+- Updated global typography defaults and normalized native input appearance.
+
+### Security
+
+- Updated vulnerable transitive dependencies to patched versions.
 
 ## [1.0.0] - 2026-07-15
 
