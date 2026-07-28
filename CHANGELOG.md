@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-07-29
+
 ### Changed
 
 - Updated Oxfmt to use the global Tailwind CSS stylesheet for class sorting and changed the font stylesheet import to a formatter-resolvable relative path.
@@ -98,7 +100,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Added GitHub Actions workflows for frontend quality checks, Rust formatting, Clippy checks, and cross-platform release builds.
 - Added release packaging for macOS, Linux, and Windows through `tauri-apps/tauri-action`.
 
-[unreleased]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v0.1.3...v1.0.0
 [0.1.3]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v0.1.1...v0.1.2
