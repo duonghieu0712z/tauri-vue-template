@@ -10,12 +10,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
-- Updated Oxfmt to use the global Tailwind CSS stylesheet for class sorting and changed the font stylesheet import to a formatter-resolvable relative path.
-- Updated global typography defaults and normalized native input appearance.
+- Updated Oxfmt to use the global Tailwind CSS stylesheet for class sorting and changed the font stylesheet import to a formatter-resolvable relative path ([130e68a](https://github.com/duonghieu0712z/tauri-vue-template/commit/130e68ad814afdb30713e461db7a787fe3c95ed3)).
+- Updated global typography defaults and normalized native input appearance ([6828199](https://github.com/duonghieu0712z/tauri-vue-template/commit/6828199924a27384e3c3ddccfa4391f451cc0531)).
 
 ### Security
 
-- Updated vulnerable transitive dependencies to patched versions.
+- Updated vulnerable transitive dependencies to patched versions ([b84dda2](https://github.com/duonghieu0712z/tauri-vue-template/commit/b84dda2ef0b2eead1c13e3d4e1143687fb83aa3c)).
 
 ## [1.0.0] - 2026-07-15
 
