@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Updated the release asset naming pattern to use the main binary name ([1e6ecd7](https://github.com/duonghieu0712z/tauri-vue-template/commit/1e6ecd71c1df619590e1f047546cb7f4e77cc302)).
+
 ## [1.0.1] - 2026-07-29
 
 ### Changed
