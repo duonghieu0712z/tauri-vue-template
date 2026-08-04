@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Extracted frontend and cross-platform Tauri checks into a reusable workflow and required release builds to pass them ([ddaad94](https://github.com/duonghieu0712z/tauri-vue-template/commit/ddaad94345c408f9a6fb4bc70d4cc324f9406a03)).
+- Moved the version bump utility into the `scripts` directory ([7be383c](https://github.com/duonghieu0712z/tauri-vue-template/commit/7be383ce8a16eb54d3efdb10cd771746ddef47da)).
 - Updated the release asset naming pattern to use the main binary name ([1e6ecd7](https://github.com/duonghieu0712z/tauri-vue-template/commit/1e6ecd71c1df619590e1f047546cb7f4e77cc302)).
 
 ## [1.0.1] - 2026-07-29
