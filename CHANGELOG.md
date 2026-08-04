@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-08-04
+
 ### Changed
 
 - Extracted frontend and cross-platform Tauri checks into a reusable workflow and required release builds to pass them ([ddaad94](https://github.com/duonghieu0712z/tauri-vue-template/commit/ddaad94345c408f9a6fb4bc70d4cc324f9406a03)).
@@ -106,7 +108,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Added GitHub Actions workflows for frontend quality checks, Rust formatting, Clippy checks, and cross-platform release builds.
 - Added release packaging for macOS, Linux, and Windows through `tauri-apps/tauri-action`.
 
-[unreleased]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.1...HEAD
+[unreleased]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v0.1.3...v1.0.0
 [0.1.3]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v0.1.2...v0.1.3
