@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- Added explicit Rustfmt settings for consistent Rust 2024 formatting ([dbab683](https://github.com/duonghieu0712z/tauri-vue-template/commit/dbab6831727e74f36de7073107ad5caffe370f50)).
+- Enforced stricter Rust and Clippy linting and replaced panic-prone backend startup paths with explicit error handling ([8827824](https://github.com/duonghieu0712z/tauri-vue-template/commit/8827824166dcb550eb0ff870b06d12c0e08ab9e9)).
 - Updated release-generated changelog links to use immutable commit or version references ([20fa9f0](https://github.com/duonghieu0712z/tauri-vue-template/commit/20fa9f0030db32ee212fa810063ef5b36ca20b24)).
 - Excluded generated auto-import declarations from Oxlint and Oxfmt checks ([08ed99d](https://github.com/duonghieu0712z/tauri-vue-template/commit/08ed99d9ea1caf909b1c0d10f8b965f6fbe67d25)).
 - Pinned pnpm 11.21.0 in the package metadata and configured GitHub Actions workflows to use that single version source ([d8eed5f](https://github.com/duonghieu0712z/tauri-vue-template/commit/d8eed5f2df276c4e209550742529c61f8bfe55d7), [e78feed](https://github.com/duonghieu0712z/tauri-vue-template/commit/e78feed843e14249bc91f626be4fb91294479c17)).
