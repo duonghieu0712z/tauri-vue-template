@@ -4296,7 +4296,7 @@ dependencies = [
 
 [[package]]
 name = "tauri-vue-template"
-version = "1.0.2"
+version = "1.0.3"
 dependencies = [
  "chrono",
  "log",

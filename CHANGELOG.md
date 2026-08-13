@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [1.0.3] - 2026-08-13
+
 ### Changed
 
 - Added explicit Rustfmt settings for consistent Rust 2024 formatting ([dbab683](https://github.com/duonghieu0712z/tauri-vue-template/commit/dbab6831727e74f36de7073107ad5caffe370f50)).
@@ -121,7 +123,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Added GitHub Actions workflows for frontend quality checks, Rust formatting, Clippy checks, and cross-platform release builds.
 - Added release packaging for macOS, Linux, and Windows through `tauri-apps/tauri-action`.
 
-[unreleased]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.2...HEAD
+[unreleased]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.3...HEAD
+[1.0.3]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v0.1.3...v1.0.0
