@@ -55,5 +55,6 @@ pub fn run() {
 
     if let Err(error) = result {
         eprintln!("error while running Tauri application: {error}");
+        std::process::exit(1);
     }
 }
