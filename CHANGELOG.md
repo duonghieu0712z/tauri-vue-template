@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Updated project dependencies to their latest compatible versions.
+- Upgraded the pinned pnpm version to 12.4.1 ([b654d32](https://github.com/duonghieu0712z/tauri-vue-template/commit/b654d32464448241aa5964dda69492266d1e9e32)).
+
 ## [1.0.3] - 2026-08-13
 
 ### Changed
