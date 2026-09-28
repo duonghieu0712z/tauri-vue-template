@@ -8,8 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- Configured Dependabot to increase declared npm version requirements when updating dependencies ([0e2a73f](https://github.com/duonghieu0712z/tauri-vue-template/commit/0e2a73faee860227cbf49efeb5330623fb54cf4c)).
 - Updated project dependencies to their latest compatible versions.
-- Upgraded the pinned pnpm version to 12.4.1 ([b654d32](https://github.com/duonghieu0712z/tauri-vue-template/commit/b654d32464448241aa5964dda69492266d1e9e32)).
+- Upgraded the pinned pnpm version to 12.6.0 ([47b1968](https://github.com/duonghieu0712z/tauri-vue-template/commit/47b1968c790699c59b95e63f44505e287e9174a0)).
 
 ## [1.0.3] - 2026-08-13
 
