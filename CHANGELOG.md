@@ -9,8 +9,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Configured Dependabot to increase declared npm version requirements when updating dependencies ([0e2a73f](https://github.com/duonghieu0712z/tauri-vue-template/commit/0e2a73faee860227cbf49efeb5330623fb54cf4c)).
-- Updated project dependencies to their latest compatible versions.
-- Upgraded the pinned pnpm version to 12.6.0 ([47b1968](https://github.com/duonghieu0712z/tauri-vue-template/commit/47b1968c790699c59b95e63f44505e287e9174a0)).
+- Grouped Tauri npm and Cargo updates into a single weekly Dependabot pull request and staggered the remaining dependency update schedules ([4e5cffc](https://github.com/duonghieu0712z/tauri-vue-template/commit/4e5cffccefccec43731ba6ce05fb647870c7a069)).
+- Updated frontend, tooling, and Rust dependencies, including upgrading `tauri-plugin-prevent-default` to 6.0.0.
+- Upgraded the pinned pnpm version to 12.9.1 ([2507b0c](https://github.com/duonghieu0712z/tauri-vue-template/commit/2507b0c58c8030bdaca8a72506e840c1be7b2e41)).
+- Simplified the Vite configuration by replacing the unnecessary async callback with a configuration object ([1b89bbd](https://github.com/duonghieu0712z/tauri-vue-template/commit/1b89bbd25a10447da9cf7ed41e7a71081e44a100)).
 
 ## [1.0.3] - 2026-08-13
 
