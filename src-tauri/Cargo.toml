@@ -16,19 +16,19 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 
 [dependencies]
 chrono = "0.4.45"
-log = "0.4.32"
-serde = { version = "1.0.228", features = ["derive"] }
+log = "0.4.34"
+serde = { version = "1.0.229", features = ["derive"] }
 specta = { version = "2.0.0-rc.25", features = ["derive"] }
 specta-typescript = "0.0.12"
-tauri = { version = "2.11.2", features = [] }
-tauri-plugin-devtools = "2.1.0"
-tauri-plugin-log = "2.8.0"
-tauri-plugin-opener = "2.5.4"
+tauri = { version = "2.12.1", features = [] }
+tauri-plugin-devtools = "2.2.2"
+tauri-plugin-log = "2.10.0"
+tauri-plugin-opener = "2.7.0"
 tauri-plugin-prevent-default = "6.0.0"
 tauri-specta = { version = "2.0.0-rc.25", features = ["javascript", "typescript"] }
 
 [build-dependencies]
-tauri-build = { version = "2.6.2", features = [] }
+tauri-build = { version = "2.7.1", features = [] }
 
 [profile.dev]
 incremental = true
