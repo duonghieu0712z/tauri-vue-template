@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Updated frontend, tooling, and Rust dependencies, including upgrading `tauri-plugin-prevent-default` to 6.0.0.
 - Upgraded the pinned pnpm version to 12.9.1 ([2507b0c](https://github.com/duonghieu0712z/tauri-vue-template/commit/2507b0c58c8030bdaca8a72506e840c1be7b2e41)).
 - Simplified the Vite configuration by replacing the unnecessary async callback with a configuration object ([1b89bbd](https://github.com/duonghieu0712z/tauri-vue-template/commit/1b89bbd25a10447da9cf7ed41e7a71081e44a100)).
+- Replaced the local `cn` utility based on `clsx` and `tailwind-merge` with a re-export from the `cn` package ([bb93acf](https://github.com/duonghieu0712z/tauri-vue-template/commit/bb93acf1c7fe18a9b94052a3c96db44e0e62ac5d)).
 
 ## [1.0.3] - 2026-08-13
 
