@@ -6,13 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-11-09
+
 ### Changed
 
+- Raised the minimum supported Node.js version from 22.12.0 to 22.18.0. Users on Node.js 22.12–22.17 must upgrade before running development, build, or preview commands, which now use Vite's native config loader ([833ffe8](https://github.com/duonghieu0712z/tauri-vue-template/commit/833ffe86d4dbdb64a0dfc294ad7409c3e0d5953c)).
 - Configured Dependabot to increase declared npm version requirements when updating dependencies ([0e2a73f](https://github.com/duonghieu0712z/tauri-vue-template/commit/0e2a73faee860227cbf49efeb5330623fb54cf4c)).
 - Grouped Tauri npm and Cargo updates into a single weekly Dependabot pull request and staggered the remaining dependency update schedules ([4e5cffc](https://github.com/duonghieu0712z/tauri-vue-template/commit/4e5cffccefccec43731ba6ce05fb647870c7a069)).
 - Updated frontend, tooling, and Rust dependencies, including `tauri` 2.12.5, `specta` and `tauri-specta` 2.0.0-rc.26, `specta-typescript` 0.0.13, and `tauri-plugin-prevent-default` 6.0.1 ([1ddc54e](https://github.com/duonghieu0712z/tauri-vue-template/commit/1ddc54e98e35f7fe75601d2003f0f63cf974abd0)).
 - Upgraded the pinned pnpm version to 12.18.0 and refreshed the JavaScript lockfile ([bbe0737](https://github.com/duonghieu0712z/tauri-vue-template/commit/bbe073764fc5bd8faa50c01f1b071a3b2b24304c)).
-- Switched Vite development, build, and preview scripts to the native config loader, aligned tooling TypeScript settings with NodeNext, and raised the minimum Node.js version to 22.18.0 ([833ffe8](https://github.com/duonghieu0712z/tauri-vue-template/commit/833ffe86d4dbdb64a0dfc294ad7409c3e0d5953c)).
+- Aligned tooling TypeScript settings with NodeNext and enabled TypeScript file extensions in imports for native config loading ([833ffe8](https://github.com/duonghieu0712z/tauri-vue-template/commit/833ffe86d4dbdb64a0dfc294ad7409c3e0d5953c)).
 - Simplified the Vite configuration by replacing the unnecessary async callback with a configuration object ([1b89bbd](https://github.com/duonghieu0712z/tauri-vue-template/commit/1b89bbd25a10447da9cf7ed41e7a71081e44a100)).
 - Replaced the local `cn` utility based on `clsx` and `tailwind-merge` with a re-export from the `cn` package ([bb93acf](https://github.com/duonghieu0712z/tauri-vue-template/commit/bb93acf1c7fe18a9b94052a3c96db44e0e62ac5d)).
 
@@ -133,7 +136,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Added GitHub Actions workflows for frontend quality checks, Rust formatting, Clippy checks, and cross-platform release builds.
 - Added release packaging for macOS, Linux, and Windows through `tauri-apps/tauri-action`.
 
-[unreleased]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.3...HEAD
+[unreleased]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.4...HEAD
+[1.0.4]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/duonghieu0712z/tauri-vue-template/compare/v1.0.0...v1.0.1
