@@ -15,7 +15,7 @@ This template keeps the project setup focused on the pieces that typically need 
 
 ## Prerequisites
 
-Install Node.js, pnpm, Rust, and the Tauri system dependencies for your operating system. The package is configured for Node.js `>=22.12.0`; the GitHub workflows currently use Node.js 24 and pnpm 11.
+Install Node.js, pnpm, Rust, and the Tauri system dependencies for your operating system. This project requires Node.js `>=22.18.0` to load TypeScript configs with Vite's native config loader.
 
 On Ubuntu or Debian, install the Tauri Linux dependencies:
 
